@@ -1,0 +1,49 @@
+{% extends "test1/base.html" %}
+
+{% block title %}Bite.AI{% endblock %}
+
+{% block content %}
+<div class="bg-gray-900 text-white">
+    <div class="min-h-screen flex items-center justify-center px-4 py-12">
+        <div class="max-w-6xl w-full">
+            <div class="text-center mb-8 sm:mb-12">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-orange-500">
+                    Welcome to Bite.AI
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-300">Discover the best food with the power of AI</p>
+            </div>
+            
+            <div class="bg-gray-800 rounded-3xl shadow-2xl overflow-hidden">
+                <div class="p-6 sm:p-8 md:p-12 space-y-6 sm:space-y-8">
+                    <div class="flex justify-center">
+                        <a href="{% url 'categorize_food' %}" class="inline-block bg-gradient-to-r from-pink-500 to-orange-500 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:from-pink-600 hover:to-orange-600 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg text-base sm:text-lg">
+                            Get Started
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-gray-400 mb-4 sm:mb-6">Experience the future of food discovery</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+                            <div class="bg-gray-700 p-4 sm:p-6 rounded-xl">
+                                <span class="text-3xl sm:text-4xl mb-2 block">🍔</span>
+                                <h3 class="text-lg sm:text-xl font-semibold mb-2">Smart Recommendations</h3>
+                                <p class="text-sm sm:text-base text-gray-400">AI-powered suggestions tailored just for you</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 sm:p-6 rounded-xl">
+                                <span class="text-3xl sm:text-4xl mb-2 block">🌟</span>
+                                <h3 class="text-lg sm:text-xl font-semibold mb-2">Personalized Choices</h3>
+                                <p class="text-sm sm:text-base text-gray-400">Curated selections based on your preferences</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 sm:p-6 rounded-xl">
+                                <span class="text-3xl sm:text-4xl mb-2 block">🍽️</span>
+                                <h3 class="text-lg sm:text-xl font-semibold mb-2">Effortless Dining</h3>
+                                <p class="text-sm sm:text-base text-gray-400">Simplify your dining experience with AI assistance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

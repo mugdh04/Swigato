@@ -1,0 +1,392 @@
+[
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "GLUTEN FREE",
+            "name": "Boiled Green Veggie",
+            "description": "Mixed natural ingredients of green vegetables such as broccoli, carrot, beans, baby corn, mushroom, corn and bell pepper served with blend of herbs.",
+            "calories": 150,
+            "protein": 7,
+            "carbs": 25,
+            "fats": 4,
+            "fiber": 10,
+            "price": 200,
+            "rating": 4.2
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "VEGAN",
+            "name": "Green Veggie with Chilli Garlic and Lemon",
+            "description": "Mixed natural ingredients of green vegetables such as broccoli, carrot, beans, baby corn, mushroom, corn and bell pepper served with blend of herbs.",
+            "calories": 150,
+            "protein": 5,
+            "carbs": 15,
+            "fats": 4,
+            "fiber": 5,
+            "price": 220,
+            "rating": 4.0
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Boiled",
+            "name": "Sauteed Vegetable with Black Salt and Lemon, Black Pepper",
+            "description": "Mixed natural ingredients of green vegetables such as broccoli, carrot, beans, baby corn, mushroom, corn and bell pepper served with blend of herbs.",
+            "calories": 120,
+            "protein": 5,
+            "carbs": 15,
+            "fats": 4,
+            "fiber": 5,
+            "price": 220,
+            "rating": 4.3
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Egg",
+            "name": "Boiled Egg with Onion and Mint Sauce",
+            "description": "Boiled egg with onion and mint sauce.",
+            "calories": 80,
+            "protein": 6,
+            "carbs": 2,
+            "fats": 6,
+            "fiber": 0,
+            "price": 70,
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Gluten Free",
+            "name": "Grilled Paneer with Chilli, Garlic and Lemon",
+            "description": "Grilled paneer that uses dry heat that quickly cooks the surface and infuses the paneer with a smoky flavour. Less in oil and low in Carbs. served with herbs and spices.",
+            "calories": 250,
+            "protein": 18,
+            "carbs": 5,
+            "fats": 22,
+            "fiber": 2,
+            "price": 240,
+            "rating": 4.2
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Gluten Free",
+            "name": "Grilled Chicken",
+            "description": "Grilled chicken that uses dry heat that quickly cooks the surface and infuses the chicken with a smoky flavour. Less in oil and low in Carbs.",
+            "calories": 220,
+            "protein": 25,
+            "carbs": 2,
+            "fats": 6,
+            "fiber": 1,
+            "price": 250,
+            "rating": 4.4
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Healthy Salads",
+            "name": "Grilled Paneer Salad",
+            "description": "Consist mixed and natural ingredients such as grilled paneer with other broccoli, carrot, beans, baby corn, mushroom, corn and bell pepper served with blend of herbs.",
+            "calories": 300,
+            "protein": 15,
+            "carbs": 25,
+            "fats": 18,
+            "fiber": 7,
+            "price": 230,
+            "rating": 4.1
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Healthy Salads",
+            "name": "Sprouts Salad",
+            "description": "Sprouts with other broccoli, carrot, beans, baby corn, mushroom, corn and bell pepper served with blend of herbs.",
+            "calories": 120,
+            "protein": 12,
+            "carbs": 20,
+            "fats": 2,
+            "fiber": 10,
+            "price": 210,
+            "rating": 4.2
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Healthy Salads",
+            "name": "Grilled Chicken Salad",
+            "description": "Grilled chicken with other broccoli, carrot, beans, baby corn, mushroom, corn and bell pepper served with blend of herbs.",
+            "calories": 250,
+            "protein": 25,
+            "carbs": 15,
+            "fats": 16,
+            "fiber": 4,
+            "price": 250,
+            "rating": 4.1
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Pasta",
+            "name": "Alfredo White Sauce Pasta",
+            "description": "Simply cooked pasta mixed with a smooth white sauce made of milk, butter and flour with the blend of green vegetables such as broccoli, baby corn, mushroom and corn.",
+            "calories": 350,
+            "protein": 12,
+            "carbs": 50,
+            "fats": 16,
+            "fiber": 5,
+            "price": 220,
+            "rating": 4.1
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Pasta",
+            "name": "Arrabiata Red Sauce Pasta",
+            "description": "Simply cooked pasta mixed with tangy homemade tomato sauce with the blend of green vegetables such as broccoli, baby corn, mushroom and corn.",
+            "calories": 350,
+            "protein": 10,
+            "carbs": 50,
+            "fats": 8,
+            "fiber": 6,
+            "price": 220,
+            "rating": 4.0
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Pasta",
+            "name": "Peri-Peri Cheese and Green Veggie Mixed Sauce Pasta",
+            "description": "Simply cooked pasta mixed with tangy homemade tomato sauce and white sauce made of milk, butter and flour with the blend of green vegetables such as broccoli, baby corn, mushroom and corn.",
+            "calories": 450,
+            "protein": 15,
+            "carbs": 30,
+            "fats": 15,
+            "fiber": 6,
+            "price": 230,
+            "rating": 4.0
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Rolls",
+            "name": "Paneer and Veggie Roll",
+            "description": "Multigrain wrap, filled with chopped vegetables, herbs and spices with paneer.",
+            "calories": 350,
+            "protein": 20,
+            "carbs": 25,
+            "fats": 18,
+            "fiber": 6,
+            "price": 180,
+            "rating": 4.2
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Rolls",
+            "name": "Grilled Paneer Roll",
+            "description": "Multigrain wrap, filled with chopped vegetables, herbs and spices with grilled paneer.",
+            "calories": 350,
+            "protein": 22,
+            "carbs": 25,
+            "fats": 12,
+            "fiber": 4,
+            "price": 210,
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Omelet",
+            "name": "Egg Omelette",
+            "description": "Egg omelette [2 eggs] and chopped vegetable and brown bread, cooked with less oil and butter.",
+            "calories": 250,
+            "protein": 18,
+            "carbs": 20,
+            "fats": 12,
+            "fiber": 4,
+            "price": 100,
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Omelet",
+            "name": "Egg Omelette with Green Vegetable and Brown Bread",
+            "description": "Egg Omelet [2 eggs] and chopped vegetable and brown bread, cooked with less oil and butter.",
+            "calories": 350,
+            "protein": 12,
+            "carbs": 40,
+            "fats": 10,
+            "fiber": 4,
+            "price": 120,
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Wheat Base Pizza",
+            "name": "Veg Loaded Thin Crust Pizza [8 inches]",
+            "description": "Wheat base pizza with topping of onion, corn, capsicum, olives, jalapeno and red paprika.",
+            "calories": 300,
+            "protein": 13,
+            "carbs": 55,
+            "fats": 12,
+            "fiber": 4,
+            "price": 350,
+            "rating": 4.1
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Wheat Momos",
+            "name": "Veg Steamed Momos [8 Pieces]",
+            "description": "Wheat base steamed Momos.",
+            "calories": 100,
+            "protein": 3,
+            "carbs": 15,
+            "fats": 2,
+            "fiber": 2,
+            "price": 150,
+            "rating": 4.0
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Chilled Beverages",
+            "name": "Masala Shikanji",
+            "description": "Refreshing Indian drink made with lemon juice, roasted cumin, black salt, and sugar, served chilled.",
+            "calories": 90,
+            "protein": 1,
+            "carbs": 20,
+            "fats": 0,
+            "fiber": 1,
+            "price": 120,
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Chilled Beverages",
+            "name": "Orange Cooler",
+            "description": "A tangy and refreshing orange-based drink with a hint of mint and soda.",
+            "calories": 110,
+            "protein": 1,
+            "carbs": 25,
+            "fats": 0,
+            "fiber": 1,
+            "price": 140,
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Chilled Beverages",
+            "name": "Iced Mocha",
+            "description": "A chilled coffee-based drink with a blend of espresso, chocolate, and milk, topped with whipped cream.",
+            "calories": 200,
+            "protein": 5,
+            "carbs": 30,
+            "fats": 8,
+            "fiber": 2,
+            "price": 180,
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Navratri Special",
+            "name": "Sabudana Khichdi",
+            "description": "A light and healthy dish made with soaked sabudana, peanuts, and mild spices, perfect for fasting.",
+            "calories": 200,
+            "protein": 4,
+            "carbs": 40,
+            "fats": 5,
+            "fiber": 2,
+            "price": 150,
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Navratri Special",
+            "name": "Kuttu Ki Puri with Aloo Sabzi",
+            "description": "Buckwheat flour puris served with mildly spiced potato curry, ideal for fasting.",
+            "calories": 300,
+            "protein": 6,
+            "carbs": 50,
+            "fats": 10,
+            "fiber": 3,
+            "price": 180,
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Navratri Special",
+            "name": "Samak Rice with Curd",
+            "description": "A wholesome meal of barnyard millet (samak rice) served with fresh curd, perfect for fasting.",
+            "calories": 250,
+            "protein": 8,
+            "carbs": 45,
+            "fats": 4,
+            "fiber": 2,
+            "price": 170,
+            "rating": 4.4
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Navratri Special",
+            "name": "Fruit Chaat",
+            "description": "A refreshing mix of seasonal fruits with a dash of rock salt and lemon juice, ideal for fasting.",
+            "calories": 120,
+            "protein": 2,
+            "carbs": 30,
+            "fats": 0,
+            "fiber": 5,
+            "price": 130,
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "test1.product",
+        "fields": {
+            "category": "Navratri Special",
+            "name": "Makhana Kheer",
+            "description": "A creamy dessert made with fox nuts, milk, and dry fruits, perfect for fasting.",
+            "calories": 180,
+            "protein": 6,
+            "carbs": 25,
+            "fats": 8,
+            "fiber": 1,
+            "price": 160,
+            "rating": 4.8
+        }
+    }
+]

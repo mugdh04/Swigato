@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<!-- Swigato logo in title tab -->
+		<link 
+		rel = "icon"
+		href = "{% static 'test1/swigato1.png' %}";
+		/>
+		
+		<!-- fontawesome.com icons -->
+		<link
+		rel = "stylesheet"
+		href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		integrity = "sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+		crossorigin = "anonymous"
+		referrerpolicy = "no-referrer"
+		/>
+		
+		<!-- Poppins font by google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		/>
+		
+		<!-- Linking CSS file -->
+		<link rel = "stylesheet" href = "{% static 'test1/styles.css' %}" />
+
+        <link rel = "stylesheet" href = "{% static 'test1/css/order_online.css' %}" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+		<title>Restaurants</title>
+	</head>
+<body>
+    <header>
+        {% include 'test1/navbar.html' %}
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Order Online</h2>
+                <p>Get food delivered from your favorite restaurants.</p>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div>
+						<select class = "drop_down_loc">
+							<option>Cities We Deliver To</option>
+							<option>Gurgaon</option>
+							<option>Delhi</option>
+							<option>Faridabad</option>
+						</select>
+					</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br><hr style="border-top: 1.4px solid rgb(170, 42, 42);"><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Popular Restaurants</h3>
+                <div class="collections__cards_container">
+
+                    <a href="{% url 'restaurant_detail' 1 %}">
+                        <div class = "cards card1">
+                            <div class = "overlay"></div>
+                            <div class = "collections__content">
+                                <h4>Haldiram's</h4>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="{% url 'restaurant_detail' 2 %}">
+                        <div class = "cards card2">
+                            <div class = "overlay"></div>
+                            <div class = "collections__content">
+                                <h4>McDonald's</h4>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <a href="{% url 'restaurant_detail' 3 %}">
+                        <div class = "cards card3">
+                            <div class = "overlay"></div>
+                            <div class = "collections__content">
+                                <h4>Domino's</h4>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <a href="{% url 'restaurant_detail' 4 %}">
+                        <div class = "cards card4">
+                            <div class = "overlay"></div>
+                            <div class = "collections__content">
+                                <h4>Barista</h4>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <footer class = "footer__container" style="background-color: white;">
+        <div class = "footer_section1">
+            <img src = "{% static 'test1/sz.png' %}" alt = "swigato logo" />
+            <div class = "section1__button_container">
+                <button>
+                    <img src = "{% static 'test1/IndianFlag.png' %}" alt = "Indian Flag" style = "width: 16px; height: 16px" />
+                    <select style = "border: none; background: #f0f0f0; cursor: pointer">
+                        <option>India</option>
+                    </select>
+                </button>
+                <button>
+                    <i class = "fa fa-globe"></i>
+                    <select style = "border: none; background: #f0f0f0; cursor: pointer">
+                        <option>English</option>
+                    </select>
+                </button>
+            </div>
+        </div>
+        <div class = "disclaimer">
+        By continuing past this page, you agree to our Terms of Service, Cookie Policy,
+        Privacy Policy and Content Policies. All trademarks are properties of their respective owners.
+        © 2025 Swigato™ Ltd. All rights reserved.<br><br><br>
+        </div>
+    </footer>
+</body>
+</html>

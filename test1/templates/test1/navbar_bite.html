@@ -1,0 +1,50 @@
+<nav class="bg-gray-900 shadow-md relative z-50">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <a href="{% url 'bite' %}" class="flex-shrink-0">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 text-xl font-bold">Bite.AI</span>
+                </a>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <a href="{% url 'home' %}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Swigato</a>
+                    <a href="{% url 'categorize_food' %}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Ask Bite.AI</a>
+                </div>
+            </div>
+            <div class="md:hidden">
+                <button type="button" class="text-gray-300 hover:text-white focus:outline-none focus:text-white" aria-label="Toggle menu" id="mobile-menu-button">
+                    <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="md:hidden absolute w-full bg-gray-900 transition-all duration-300 ease-in-out max-h-0 overflow-hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="{% url 'home' %}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Swigato</a>
+            <a href="{% url 'categorize_food' %}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Ask Bite.AI</a>
+        </div>
+    </div>
+</nav>
+
+<style>
+    #mobile-menu.active {
+        max-height: 300px; /* Adjust this value based on your menu's content */
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+        });
+    }
+});
+</script>

@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<!-- Swigato logo in title tab -->
+		<link 
+		rel = "icon"
+		href = "{% static 'test1/swigato1.png' %}";
+		/>
+		
+		<!-- fontawesome.com icons -->
+		<link
+		rel = "stylesheet"
+		href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		integrity = "sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+		crossorigin = "anonymous"
+		referrerpolicy = "no-referrer"
+		/>
+		
+		<!-- Linking CSS file -->
+		<link rel = "stylesheet" href = "{% static 'test1/styles.css' %}" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<style>
+			body {
+				font-family: 'Poppins', sans-serif;
+			}
+		</style>
+
+		<title>Swigato</title>
+	</head>
+	<body>
+
+        <!-- This is Hero Optional -->
+        <div class="hero-section">
+			{% if user.is_authenticated %}
+				<div class="navigation">
+					<a>Welcome {{ user.username }}</a>
+					<a href="{% url 'logout' %}">Logout</a>
+					<a href="{% url 'bite' %}">
+						<img src="{% static 'test1/bite.png' %}" width="100px" height="100px">
+					</a>
+				</div>
+			{% else %}
+				<div class="navigation">
+					<a href="{% url 'login' %}">Login</a>
+					<a href="{% url 'signup' %}">Signup</a>
+					<a href="{% url 'bite' %}" class="flex-shrink-0">
+                    	<span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 text-xl font-bold">Bite.AI</span>
+                	</a>
+				</div>
+			{% endif %}
+			<a href="{% url 'home' %}">
+            	<img src ="{% static 'test1/swigato1.png' %}" alt = "Restaurant" class = "hero__section_logo"/>
+			</a>
+            <p>Discover the best food & drinks in Delhi NCR</p>
+            <div class="search-bar" style="display: flex; align-items: center; justify-content: center; margin-top: 10px;">
+				<input class = "hero__section_input_search" type = "text" placeholder = "Search for a restaurant, cuisine or a dish" style="color: black;" />
+				<button>
+					<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+						<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+					</svg>
+				</button>
+            </div>
+        </div>
+
+		<!-- This is for cards that zomato offer -->
+		<section class = "container_cards">
+
+			<a href="{% url 'order_online' %}">
+				<div class = "we_offer__cards">
+					<img src = "{% static 'test1/im2.jpg' %}" alt = "card1 image"/>
+					<div class = "we_offer__cards_content">
+						<h2 style="color: black;">Order Online</h2>
+						<p style="color: black;">Stay home and order to your doorstep</p><br>
+					</div>
+				</div>
+			</a>
+			 
+			<a href="{% url 'bite' %}">
+				<div class = "we_offer__cards">
+					<img src = "{% static 'test1/Bite-Hero-img.png' %}" alt = "card2 image"/>
+					<div class = "we_offer__cards_content">
+						<h2 style="color: black;">Bite.AI</h2>
+						<p style="color: black;">Let Bite.AI search best options for you</p><br>
+					</div>
+				</div>
+			</a>
+
+			<a href="https://in.bookmyshow.com/explore/events-national-capital-region-ncr">
+				<div class = "we_offer__cards">
+					<img src = "{% static 'test1/im1.jpg' %}" alt = "card3 image"/>
+					<div class = "we_offer__cards_content">
+						<h2 style="color: black;">Live Events</h2>
+						<p style="color: black;">Attend Live Events in Pubs and Clubs</p><br>
+					</div>
+				</div>
+			</a>
+		</section>
+
+		<!-- This is for collection section -->
+		<section class = "container_collections" style="margin-left: 210px; justify-content: flex-start;">
+			<h1>Collections</h1>
+			<div class = "sub_heading__container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1100px;">
+				<span>Explore curated lists of top restaurants and cafes in Delhi-NCR based on trends</span>
+				<span id = "span">All collections in Delhi-NCR</span>
+			</div>
+			<div class = "collections__cards_container" style="display: flex; gap: 32px; margin-top: 24px; max-width: 1100px;">
+					
+				<a href="{% url 'restaurant_detail' 1 %}">
+					<div class = "cards card1">
+						<div class = "overlay"></div>
+						<div class = "collections__content">
+							<h4>Haldiram's</h4>
+							<span>Best in Restaurant</span>
+						</div>
+					</div>
+				</a>
+				
+				<a href="{% url 'restaurant_detail' 2 %}">
+					<div class = "cards card2">
+					<div class = "overlay"></div>
+						<div class = "collections__content">
+							<h4>McDonald's</h4>
+							<span>Best in Burgers</span>
+						</div>
+					</div>
+				</a>
+
+				<a href="{% url 'restaurant_detail' 3 %}">
+					<div class = "cards card3">
+						<div class = "overlay"></div>
+						<div class = "collections__content">
+							<h4>Domino's</h4>
+							<span>Best in Pizzas</span>
+						</div>
+					</div>
+				</a>
+
+				<a href="{% url 'restaurant_detail' 4 %}">
+					<div class = "cards card4">
+						<div class = "overlay"></div>
+						<div class = "collections__content">
+							<h4>Barista</h4>
+							<span>Best in Cafes</span>
+						</div>
+					</div>
+				</a>
+				
+			</div>
+		</section>
+
+
+		<section class = "explore_places__container" style="margin-left: 210px;">
+			<div class = "sub_container">
+				<div>
+					<h1>Explore Options Near Me</h1>
+					<span>Explore the restaurants and cuisines across various cities under our service</span>
+				</div>
+				<div class = "drop_down__container">
+					<div>
+						<select class="drop_down_menu">
+							<option selected disabled>Popular Cousine Near Me</option>
+							<option disabled>North Indian</option>
+							<option disabled>South Indian</option>
+							<option disabled>Italian</option>
+							<option disabled>Chinese</option>
+						</select>
+					</div>
+					<div>
+						<select class = "drop_down_menu">
+							<option selected disabled>Popular Restaurant Near Me</option>
+							<option disabled>Haldiram's</option>
+							<option disabled>Bikanervala</option>
+							<option disabled>Pizza Hut</option>
+							<option disabled>Domino's</option>
+                            <option disabled>McDonald's</option>
+                            <option disabled>Barista</option>
+						</select>
+					</div>
+					<div>
+						<select class = "drop_down_menu">
+							<option selected disabled>Cities We Deliver To</option>
+							<option disabled>Gurgaon</option>
+							<option disabled>Delhi</option>
+							<option disabled>Faridabad</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- This is for footer section -->
+		<footer class = "footer__container" style="background-color: white;">
+			<div class = "footer_section1">
+				<img src = "{% static 'test1/sz.png' %}" alt = "swigato logo"/>
+				<div class="section1__button_container" style="display: flex; gap: 8px; align-items: center;">
+					<div style="display: flex; align-items: center; background: #f0f0f0; border-radius: 18px; padding: 4px 12px;">
+						<img src="{% static 'test1/IndianFlag.png' %}" alt="Indian Flag" style="width: 16px; height: 16px; margin-right: 6px;"/>
+						<select style="border: none; background: transparent; cursor: pointer; outline: none;">
+							<option>India</option>
+						</select>
+					</div>
+					<div style="display: flex; align-items: center; background: #f0f0f0; border-radius: 18px; padding: 4px 12px;">
+						<i class="fa fa-globe" style="margin-right: 6px;"></i>
+						<select style="border: none; background: transparent; cursor: pointer; outline: none;">
+							<option>English</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class = "disclaimer">
+			By continuing past this page, you agree to our Terms of Service, Cookie Policy,
+			Privacy Policy and Content Policies. All trademarks are properties of their respective owners.
+			© 2025 Swigato™ Ltd. All rights reserved.<br><br><br>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<!-- Swigato logo in title tab -->
+		<link 
+		rel = "icon"
+		href = "{% static 'test1/swigato1.png' %}";
+		/>
+		
+		<!-- fontawesome.com icons -->
+		<link
+		rel = "stylesheet"
+		href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		integrity = "sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+		crossorigin = "anonymous"
+		referrerpolicy = "no-referrer"
+		/>
+		
+		<!-- Poppins font by google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		/>
+		
+		<!-- Linking CSS file -->
+		<link rel = "stylesheet" href = "{% static 'test1/styles.css' %}" />
+
+        <link rel = "stylesheet" href = "{% static 'test1/css/order_online.css' %}" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+		<title>{{ restaurant.name }}</title>
+		<style>
+			.menu-card-flex {
+				display: flex;
+				align-items: flex-start;
+				gap: 32px;
+				padding: 12px 24px 12px 24px; /* reduced vertical padding */
+			}
+			.menu-card-img {
+				width: 220px;
+				height: 160px;
+				object-fit: cover;
+				border-radius: 8px;
+				flex-shrink: 0;
+				background: #f8f8f8;
+			}
+			.menu-card-content {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			@media (max-width: 700px) {
+				.menu-card-flex {
+					flex-direction: column;
+					align-items: stretch;
+					gap: 16px;
+					padding: 10px 0; /* also reduce for mobile */
+				}
+				.menu-card-img {
+					width: 100%;
+					height: 180px;
+				}
+			}
+			.menu-section-title {
+				margin-bottom: 1px; /* reduce gap below Menu heading */
+			}
+		</style>
+	</head>
+<body>
+    <body>
+        <header>
+            <nav>
+                {% include 'test1/navbar.html' %}
+            </nav>
+        </header>
+        <main>
+			<div class="container">
+				<div class="row">
+					<div class="container-md">
+						<!-- Restaurant header flex layout -->
+						<div style="display: flex; align-items: flex-start; gap: 32px; margin-bottom: 32px;">
+							<img src="{{ restaurant.image.url }}" style="width: 260px; height: 180px; object-fit: cover; border-radius: 10px; flex-shrink: 0; margin-left: 32px;" alt="{{ restaurant.name }}"/>
+							<div>
+								<h1>{{ restaurant.name }}</h1>
+								<p>{{ restaurant.address }}</p>
+								<p>Rating: {{ restaurant.rating }} / 5</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-md">
+						<div class="alert menu-section-title" style="color: rgb(231, 0, 0);">
+							<h2>Menu</h2>
+						</div>
+						<div class="container_cards">
+							{% for item in menu_items %}
+								<div class="col lg-4 col md-6 col-12">
+									<div class="card mt-2">
+										<div class="menu-card-flex">
+											<img src="{{ item.image.url }}" class="menu-card-img" alt="{{ item.name }}" />
+											<div class="menu-card-content">
+												<h2 style="color: black;">{{ item.name }} (Rs. {{ item.price }})</h2>
+												<p style="color: black;">{{ item.description }}</p>
+												<p style="color: black;">Rating: {{ item.rating }}</p>
+												<button class="btn btn-danger">Buy Now</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+        </main>
+		<footer class = "footer__container" style="background-color: white;">
+			<div class = "footer_section1">
+				<img src = "{% static 'test1/sz.png' %}" alt = "swigato logo" />
+				<div class = "section1__button_container">
+					<button>
+						<img src = "{% static 'test1/IndianFlag.png' %}" alt = "Indian Flag" style = "width: 16px; height: 16px" />
+						<select style = "border: none; background: #f0f0f0; cursor: pointer">
+							<option>India</option>
+						</select>
+					</button>
+					<button>
+						<i class = "fa fa-globe"></i>
+						<select style = "border: none; background: #f0f0f0; cursor: pointer">
+							<option>English</option>
+						</select>
+					</button>
+				</div>
+			</div>
+			<div class = "disclaimer">
+			By continuing past this page, you agree to our Terms of Service, Cookie Policy,
+			Privacy Policy and Content Policies. All trademarks are properties of their respective owners.
+			© 2025 Swigato™ Ltd. All rights reserved.<br><br><br>
+			</div>
+		</footer>
+    </body>
+</body>
+</html>
