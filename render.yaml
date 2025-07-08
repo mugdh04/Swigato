@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: swigato
+    runtime: python
+    buildCommand: ""
+    startCommand: gunicorn project1.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: project1.settings
+      - key: PYTHON_VERSION
+        value: 3.11
